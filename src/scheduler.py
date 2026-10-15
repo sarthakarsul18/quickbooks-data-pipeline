@@ -1,10 +1,3 @@
-"""Automated Scheduler for QuickBooks Online Data Pipeline.
-
-Runs the sync job automatically every 4 hours (configurable via SYNC_INTERVAL_HOURS).
-
-Usage:
-    python -m src.scheduler
-"""
 import datetime
 import logging
 import signal

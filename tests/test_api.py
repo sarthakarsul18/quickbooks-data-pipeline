@@ -1,4 +1,3 @@
-"""Unit tests for FastAPI endpoints (/health, /auth/login, /callback, /status)."""
 import pytest
 from fastapi.testclient import TestClient
 from unittest.mock import MagicMock, patch

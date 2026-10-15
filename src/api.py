@@ -1,12 +1,3 @@
-"""FastAPI Web Server for QuickBooks OAuth Callback and Health Checks.
-
-Endpoints:
-- GET /health      : Health endpoint reporting system status and auth status
-- GET /auth/login  : Redirects browser to QuickBooks OAuth 2.0 authorization URL
-- GET /callback    : Handles QuickBooks OAuth 2.0 redirect, saves tokens and realmId
-- GET /status      : Displays last sync checkpoint and pipeline stats
-- POST /sync       : Triggers an on-demand sync run via API
-"""
 import datetime
 import logging
 from typing import Any, Dict, Optional

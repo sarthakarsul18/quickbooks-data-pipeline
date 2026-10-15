@@ -1,4 +1,3 @@
-"""Unit tests for QuickBooks Online extractor module."""
 import datetime
 import pytest
 from unittest.mock import MagicMock

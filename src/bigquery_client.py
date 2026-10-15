@@ -1,12 +1,3 @@
-"""Google BigQuery Client for QuickBooks Online Data Ingestion.
-
-Supports:
-- Application Default Credentials (ADC) - No downloaded service-account key required!
-- Auto-creation of dataset 'quickbooks_data' and entity tables
-- Idempotent UPSERT / MERGE based on entity ID
-- Soft-deletion / CDC deletion tracking with '_is_deleted' flag
-- Native JSON / structured payload storage for zero schema drift
-"""
 import datetime
 import json
 import logging

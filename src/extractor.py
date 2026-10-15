@@ -1,22 +1,3 @@
-"""QuickBooks Online Data Extractor.
-
-Orchestrates data extraction for the 8 core accounting entities:
-- Account
-- Customer
-- Vendor
-- Invoice
-- Payment
-- Bill
-- BillPayment
-- JournalEntry
-
-Supports:
-- Initial Full Sync via paginated queries
-- Incremental Sync via Change Data Capture (CDC) API
-- Fallback to MetaData.LastUpdatedTime query when CDC is unavailable
-- Tracking updates and soft/hard deletions
-- Batching and loading records into Google BigQuery
-"""
 import datetime
 import json
 import logging

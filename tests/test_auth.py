@@ -1,4 +1,3 @@
-"""Unit tests for QuickBooks Online OAuth 2.0 authentication module."""
 import json
 import time
 import pytest

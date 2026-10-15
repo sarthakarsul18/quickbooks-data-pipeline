@@ -1,9 +1,3 @@
-"""CLI Entry point for manually running the QuickBooks Online Data Pipeline.
-
-Usage:
-    python -m src.sync
-    python -m src.sync --full
-"""
 import argparse
 import logging
 import sys

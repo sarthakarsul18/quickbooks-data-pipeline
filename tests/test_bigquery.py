@@ -1,4 +1,3 @@
-"""Unit tests for BigQuery warehouse client and idempotent upsert logic."""
 import datetime
 import json
 import pytest

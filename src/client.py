@@ -1,10 +1,3 @@
-"""QuickBooks Online API Client.
-
-READ-ONLY client designed specifically for data extraction pipelines.
-STRICT SAFETY GUARANTEE: Never issues mutations to create, update, or delete
-records in the QuickBooks sandbox company. Enforces read-only safety by restricting
-all requests exclusively to the '/query' (SELECT queries via POST) and '/cdc' (GET) endpoints.
-"""
 import logging
 import time
 from typing import Any, Dict, Generator, List, Optional

@@ -1,4 +1,3 @@
-"""Unit tests for QuickBooks Online API client."""
 import pytest
 from unittest.mock import MagicMock, patch
 

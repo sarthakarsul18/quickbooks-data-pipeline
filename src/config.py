@@ -1,4 +1,3 @@
-"""Configuration management for the QuickBooks Online Data Pipeline."""
 import os
 from pathlib import Path
 from pydantic_settings import BaseSettings, SettingsConfigDict

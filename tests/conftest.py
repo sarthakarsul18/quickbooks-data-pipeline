@@ -1,4 +1,3 @@
-"""Pytest fixtures and mocked data for QuickBooks Online Data Pipeline tests."""
 import json
 import pytest
 from unittest.mock import MagicMock

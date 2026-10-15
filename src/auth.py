@@ -1,11 +1,3 @@
-"""QuickBooks Online OAuth 2.0 Authentication & Token Management.
-
-Handles:
-- Generating the OAuth2 authorization URL
-- Exchanging the authorization code for access and refresh tokens
-- Automatic token refreshing
-- Storing tokens securely in a local JSON file (ignored by git)
-"""
 import base64
 import json
 import logging
