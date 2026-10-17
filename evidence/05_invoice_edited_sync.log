@@ -1,0 +1,43 @@
+2026-10-17 19:32:13 [INFO] src.sync: Starting QuickBooks Data Pipeline extraction job...
+2026-10-17 19:32:13 [INFO] src.sync: Target BigQuery Dataset: stone-column-511709-d4.quickbooks_data
+2026-10-17 19:32:13 [INFO] src.extractor: ================ STARTING INCREMENTAL SYNC (since 2026-10-17T13:20:50.785563+00:00) ================
+2026-10-17 19:32:13 [INFO] src.client: Executing CDC query (GET) for entities [Account,Customer,Vendor,Invoice,Payment,Bill,BillPayment,JournalEntry] since 2026-10-17T13:20:50Z...
+2026-10-17 19:32:16 [INFO] src.client: CDC found 0 changed/deleted records for Account.
+2026-10-17 19:32:16 [INFO] src.client: CDC found 0 changed/deleted records for Customer.
+2026-10-17 19:32:16 [INFO] src.client: CDC found 0 changed/deleted records for Vendor.
+2026-10-17 19:32:16 [INFO] src.client: CDC found 1 changed/deleted records for Invoice.
+2026-10-17 19:32:16 [INFO] src.client: CDC found 0 changed/deleted records for Payment.
+2026-10-17 19:32:16 [INFO] src.client: CDC found 0 changed/deleted records for Bill.
+2026-10-17 19:32:16 [INFO] src.client: CDC found 0 changed/deleted records for BillPayment.
+2026-10-17 19:32:16 [INFO] src.client: CDC found 0 changed/deleted records for JournalEntry.
+2026-10-17 19:32:16 [INFO] src.extractor: Incremental sync for Account: 0 records processed.
+2026-10-17 19:32:16 [INFO] src.extractor: Incremental sync for Customer: 0 records processed.
+2026-10-17 19:32:16 [INFO] src.extractor: Incremental sync for Vendor: 0 records processed.
+2026-10-17 19:32:20 [INFO] src.bigquery_client: Connecting to BigQuery using ADC for project: stone-column-511709-d4
+2026-10-17 19:32:21 [INFO] src.bigquery_client: BigQuery dataset 'quickbooks_data' exists.
+2026-10-17 19:32:21 [INFO] src.bigquery_client: Loading 1 records into staging table stone-column-511709-d4.quickbooks_data.staging_invoices_1792245733_606299bb...
+2026-10-17 19:32:25 [INFO] src.bigquery_client: Executing BigQuery MERGE for stone-column-511709-d4.quickbooks_data.invoices...
+2026-10-17 19:32:25 [WARNING] src.bigquery_client: BigQuery Sandbox detected (DML not supported). Executing CTAS deduplication fallback for stone-column-511709-d4.quickbooks_data.invoices...
+2026-10-17 19:32:28 [INFO] src.bigquery_client: Cleaned up staging table stone-column-511709-d4.quickbooks_data.staging_invoices_1792245733_606299bb.
+2026-10-17 19:32:28 [INFO] src.bigquery_client: Successfully upserted 1 records into stone-column-511709-d4.quickbooks_data.invoices.
+2026-10-17 19:32:28 [INFO] src.extractor: Incremental sync for Invoice: 1 records processed.
+2026-10-17 19:32:28 [INFO] src.extractor: Incremental sync for Payment: 0 records processed.
+2026-10-17 19:32:28 [INFO] src.extractor: Incremental sync for Bill: 0 records processed.
+2026-10-17 19:32:28 [INFO] src.extractor: Incremental sync for BillPayment: 0 records processed.
+2026-10-17 19:32:28 [INFO] src.extractor: Incremental sync for JournalEntry: 0 records processed.
+2026-10-17 19:32:28 [INFO] src.extractor: ================ INCREMENTAL SYNC COMPLETED ================
+2026-10-17 19:32:28 [INFO] src.extractor: Updated sync state to: 2026-10-17T14:02:13.933048+00:00
+2026-10-17 19:32:28 [INFO] src.sync: ================ SYNC SUMMARY ================
+2026-10-17 19:32:28 [INFO] src.sync: Sync Type:     INCREMENTAL
+2026-10-17 19:32:28 [INFO] src.sync: Status:        success
+2026-10-17 19:32:28 [INFO] src.sync: Timestamp:     2026-10-17T14:02:13.933048+00:00
+2026-10-17 19:32:28 [INFO] src.sync: Total Records: 1
+2026-10-17 19:32:28 [INFO] src.sync:   - Account        : 0 records
+2026-10-17 19:32:28 [INFO] src.sync:   - Customer       : 0 records
+2026-10-17 19:32:28 [INFO] src.sync:   - Vendor         : 0 records
+2026-10-17 19:32:28 [INFO] src.sync:   - Invoice        : 1 records
+2026-10-17 19:32:28 [INFO] src.sync:   - Payment        : 0 records
+2026-10-17 19:32:28 [INFO] src.sync:   - Bill           : 0 records
+2026-10-17 19:32:28 [INFO] src.sync:   - BillPayment    : 0 records
+2026-10-17 19:32:28 [INFO] src.sync:   - JournalEntry   : 0 records
+2026-10-17 19:32:28 [INFO] src.sync: ==============================================
