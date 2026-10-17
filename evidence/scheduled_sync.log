@@ -37,3 +37,45 @@
 2026-10-17 21:54:05 [INFO] src.sync: ==============================================
 Exit code: 0 
 ==== Finished Sat 10/17/2026 21:54:06.10 ==== 
+==== Started Sun 10/18/2026  1:54:02.92 ==== 
+2026-10-18 01:54:13 [INFO] src.sync: Starting QuickBooks Data Pipeline extraction job...
+2026-10-18 01:54:13 [INFO] src.sync: Target BigQuery Dataset: stone-column-511709-d4.quickbooks_data
+2026-10-18 01:54:13 [INFO] src.extractor: ================ STARTING INCREMENTAL SYNC (since 2026-10-17T16:24:03.890687+00:00) ================
+2026-10-18 01:54:13 [INFO] src.client: Executing CDC query (GET) for entities [Account,Customer,Vendor,Invoice,Payment,Bill,BillPayment,JournalEntry] since 2026-10-17T16:24:03Z...
+2026-10-18 01:54:13 [INFO] src.auth: Access token expired or close to expiration. Refreshing...
+2026-10-18 01:54:13 [INFO] src.auth: Refreshing QuickBooks access token...
+2026-10-18 01:54:15 [INFO] src.auth: QuickBooks access token refreshed successfully.
+2026-10-18 01:54:18 [INFO] src.client: CDC found 0 changed/deleted records for Account.
+2026-10-18 01:54:18 [INFO] src.client: CDC found 0 changed/deleted records for Customer.
+2026-10-18 01:54:18 [INFO] src.client: CDC found 0 changed/deleted records for Vendor.
+2026-10-18 01:54:18 [INFO] src.client: CDC found 0 changed/deleted records for Invoice.
+2026-10-18 01:54:18 [INFO] src.client: CDC found 0 changed/deleted records for Payment.
+2026-10-18 01:54:18 [INFO] src.client: CDC found 0 changed/deleted records for Bill.
+2026-10-18 01:54:18 [INFO] src.client: CDC found 0 changed/deleted records for BillPayment.
+2026-10-18 01:54:18 [INFO] src.client: CDC found 0 changed/deleted records for JournalEntry.
+2026-10-18 01:54:18 [INFO] src.extractor: Incremental sync for Account: 0 records processed.
+2026-10-18 01:54:18 [INFO] src.extractor: Incremental sync for Customer: 0 records processed.
+2026-10-18 01:54:18 [INFO] src.extractor: Incremental sync for Vendor: 0 records processed.
+2026-10-18 01:54:18 [INFO] src.extractor: Incremental sync for Invoice: 0 records processed.
+2026-10-18 01:54:18 [INFO] src.extractor: Incremental sync for Payment: 0 records processed.
+2026-10-18 01:54:18 [INFO] src.extractor: Incremental sync for Bill: 0 records processed.
+2026-10-18 01:54:18 [INFO] src.extractor: Incremental sync for BillPayment: 0 records processed.
+2026-10-18 01:54:18 [INFO] src.extractor: Incremental sync for JournalEntry: 0 records processed.
+2026-10-18 01:54:18 [INFO] src.extractor: ================ INCREMENTAL SYNC COMPLETED ================
+2026-10-18 01:54:18 [INFO] src.extractor: Updated sync state to: 2026-10-17T20:24:13.611736+00:00
+2026-10-18 01:54:18 [INFO] src.sync: ================ SYNC SUMMARY ================
+2026-10-18 01:54:18 [INFO] src.sync: Sync Type:     INCREMENTAL
+2026-10-18 01:54:18 [INFO] src.sync: Status:        success
+2026-10-18 01:54:18 [INFO] src.sync: Timestamp:     2026-10-17T20:24:13.611736+00:00
+2026-10-18 01:54:18 [INFO] src.sync: Total Records: 0
+2026-10-18 01:54:18 [INFO] src.sync:   - Account        : 0 records
+2026-10-18 01:54:18 [INFO] src.sync:   - Customer       : 0 records
+2026-10-18 01:54:18 [INFO] src.sync:   - Vendor         : 0 records
+2026-10-18 01:54:18 [INFO] src.sync:   - Invoice        : 0 records
+2026-10-18 01:54:18 [INFO] src.sync:   - Payment        : 0 records
+2026-10-18 01:54:18 [INFO] src.sync:   - Bill           : 0 records
+2026-10-18 01:54:18 [INFO] src.sync:   - BillPayment    : 0 records
+2026-10-18 01:54:18 [INFO] src.sync:   - JournalEntry   : 0 records
+2026-10-18 01:54:18 [INFO] src.sync: ==============================================
+Exit code: 0 
+==== Finished Sun 10/18/2026  1:54:18.91 ==== 
