@@ -331,14 +331,3 @@ Do not blindly run `git add .` without reviewing the status first.
 
 **Counts differ between QuickBooks and BigQuery**
 - Confirm company, entity, date range, and UI filters match. Check inactive records and deletion/tombstone behavior.
-
-## Assignment completion checklist
-
-- [ ] Full sync completed; log saved.
-- [ ] Incremental sync completed; log saved.
-- [ ] QuickBooks and BigQuery counts compared for all eight entities.
-- [ ] Four-hour Task Scheduler trigger configured.
-- [ ] A scheduled run completed without manually clicking **Run**; log evidence saved.
-- [ ] Test invoice create, edit, and delete states verified in BigQuery after each sync.
-- [ ] AI conversation links/exports documented in `ai-chats/`.
-- [ ] README and evidence reviewed for secrets before commit/push.
