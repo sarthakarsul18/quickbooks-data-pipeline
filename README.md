@@ -237,22 +237,47 @@ Without `-Append`, `Out-File evidence\scheduled_task_status.txt` overwrites the 
 
 ## BigQuery validation
 
-Inspect the dataset's actual table names and schemas before using SQL. Example count query (adjust table name to match the real schema):
+Run the following query to compare the non-deleted record counts for all eight entity types in BigQuery:
 
 ```sql
-SELECT COUNT(*) AS row_count
-FROM `stone-column-511709-d4.quickbooks_data.Invoices`;
+SELECT 'Accounts' AS entity, COUNTIF(is_deleted IS NOT TRUE) AS record_count
+FROM `stone-column-511709-d4.quickbooks_data.accounts`
+
+UNION ALL
+
+SELECT 'Customers', COUNTIF(is_deleted IS NOT TRUE)
+FROM `stone-column-511709-d4.quickbooks_data.customers`
+
+UNION ALL
+
+SELECT 'Vendors', COUNTIF(is_deleted IS NOT TRUE)
+FROM `stone-column-511709-d4.quickbooks_data.vendors`
+
+UNION ALL
+
+SELECT 'Invoices', COUNTIF(is_deleted IS NOT TRUE)
+FROM `stone-column-511709-d4.quickbooks_data.invoices`
+
+UNION ALL
+
+SELECT 'Payments', COUNTIF(is_deleted IS NOT TRUE)
+FROM `stone-column-511709-d4.quickbooks_data.payments`
+
+UNION ALL
+
+SELECT 'Bills', COUNTIF(is_deleted IS NOT TRUE)
+FROM `stone-column-511709-d4.quickbooks_data.bills`
+
+UNION ALL
+
+SELECT 'Bill Payments', COUNTIF(is_deleted IS NOT TRUE)
+FROM `stone-column-511709-d4.quickbooks_data.bill_payments`
+
+UNION ALL
+
+SELECT 'Journal Entries', COUNTIF(is_deleted IS NOT TRUE)
+FROM `stone-column-511709-d4.quickbooks_data.journal_entries`;
 ```
-
-Example record lookup (replace the ID and adjust the ID column if needed):
-
-```sql
-SELECT *
-FROM `stone-column-511709-d4.quickbooks_data.Invoices`
-WHERE Id = 'YOUR_QUICKBOOKS_INVOICE_ID';
-```
-
-Compare counts for all eight entity types against the same QuickBooks company and equivalent filters. UI filters such as date ranges, active/inactive, or paid/unpaid can explain apparent count differences. Do not claim all counts match until each entity has been checked and evidence saved.
 
 ## Test invoice lifecycle evidence
 
